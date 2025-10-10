@@ -1,55 +1,137 @@
-# Terminal Searcher 🔍
+# 🧭 Terminal Searcher 🔍
 
-Search the web directly from your terminal!
+Search the web directly from your **terminal** — fast, simple, and convenient!
 
-## Usage
+Easily open search results in your default browser for platforms like Google, YouTube, GitHub, and Stack Overflow.
+
+---
+
+## 🚀 Usage
 
 ```bash
 search <platform> <your query>
 ```
 
-### Examples
+### 🔸 Examples
+
 ```bash
-# Search Google
+# Google Search
 search google how to make chocolate cake
 search google python tutorials
 
-# Search YouTube
+# YouTube Search
 search youtube machine learning tutorials
 search youtube music videos
 
-# Search GitHub
+# GitHub Search
 search github rust projects
 search github docker examples
 
-# Search StackOverflow
+# Stack Overflow Search
 search stackoverflow fix segmentation fault
 search stackoverflow javascript array methods
 ```
 
-## Supported Platforms
+You can also wrap multi-word queries in quotes:
 
-- **google** - Google Search
-- **youtube** - YouTube Search
-- **github** - GitHub Search
-- **stackoverflow** - StackOverflow Search
+```bash
+search google "how to fix error 404 in nginx"
+```
 
-## Quick Tips
+---
 
-- Use quotes for multi-word queries:
-  ```bash
-  search google "how to fix error 404 in nginx"
-  ```
+## 🌐 Supported Platforms
 
-- The tool automatically handles spaces and special characters
-- Results open in your default web browser
+| Platform          | Description                  |
+| ----------------- | ---------------------------- |
+| **google**        | Search the web via Google    |
+| **youtube**       | Search videos on YouTube     |
+| **github**        | Search repositories/code     |
+| **stackoverflow** | Search programming questions |
 
-## Installation
+---
 
-See the INSTALL.md file for installation instructions.
+## ⚙️ Features
 
-## Need Help?
+✅ Lightweight and written in C++
+✅ Works on any Linux distribution
+✅ Opens results instantly in your default browser
+✅ Simple `.sh` installer script for global use
+✅ Automatically adds itself to your PATH
+
+---
+
+## 💾 Installation
+
+### 🧩 Automatic (Recommended)
+
+Clone the repository and run the installer:
+
+```bash
+git clone https://github.com/mostafa-mesbah/Terminal-Searcher.git
+cd Terminal-Searcher
+./install.sh
+```
+
+Then restart your terminal or run:
+
+```bash
+source ~/.bashrc
+```
+
+Now you can use the `search` command from anywhere! 🎉
+
+---
+
+### 🧰 Manual Installation
+
+1. Compile the program manually:
+
+   ```bash
+   g++ search.cpp -o ~/.local/bin/search
+   ```
+2. Make it executable:
+
+   ```bash
+   chmod +x ~/.local/bin/search
+   ```
+3. Ensure your PATH includes `~/.local/bin`:
+
+   ```bash
+   export PATH="$HOME/.local/bin:$PATH"
+   ```
+
+---
+
+## 🗑️ Uninstallation
+
+To remove the command completely:
+
+```bash
+rm -f ~/.local/bin/search
+```
+
+(Optional) remove the PATH line from your `~/.bashrc` if it was added:
+
+```bash
+sed -i '/export PATH="\$HOME\/.local\/bin:\$PATH"/d' ~/.bashrc
+```
+
+---
+
+## 🧠 Help
 
 ```bash
 search --help
 ```
+
+---
+
+## 🧑‍💻 Author
+
+**Mostafa Mesbah**
+📍 Cairo, Egypt
+🔗 [GitHub Profile](https://github.com/mostafa-mesbah)
+
+
+
