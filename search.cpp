@@ -9,10 +9,10 @@ int main(int argc, char* argv[]) {
     if (argc < 3) {
         cerr << "Error: Missing arguments!\n";
         cerr << "Usage: search <platform> <query>\n";
-        cerr << "Available platforms: youtube, google, github\n";
+        cerr << "Available platforms: youtube, google, github, stackoverflow\n";
         return 1;
     } else {
-        string platform = argv[1];  // ← FIXED: Changed from argv[0] to argv[1]
+        string platform = argv[1];
         transform(platform.begin(), platform.end(), platform.begin(), ::tolower);
 
         string query = "";
@@ -29,16 +29,18 @@ int main(int argc, char* argv[]) {
             url = "https://www.google.com/search?q=" + query;
         else if (platform == "github")
             url = "https://github.com/search?q=" + query;
+        else if (platform == "stackoverflow")
+            url = "https://stackoverflow.com/search?q=" + query;
         else {
             cerr << "Error: Unknown platform: " << platform << endl;
-            cerr << "Available platforms: youtube, google, github\n";
+            cerr << "Available platforms: youtube, google, github, stackoverflow\n";
             return 1;
         }
 
         cout << "Opening: " << url << endl;
 
         // Open the URL in the default browser
-        string command = "xdg-open \"" + url + "\" &";  // Add & here
+        string command = "xdg-open \"" + url + "\" &";
         system(command.c_str());
     }
 
