@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
         cout << "Opening: " << url << endl;
 
         // Open the URL in the default browser
-        string command = "xdg-open \"" + url + "\" &";
+        string command = "xdg-open \"" + url + "\" >/dev/null 2>&1 &";
         system(command.c_str());
     }
 
