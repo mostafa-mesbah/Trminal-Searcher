@@ -1,0 +1,17 @@
+# Ignore build files
+*.o
+*.out
+*.exe
+
+# Ignore compiled binary
+search
+
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore system or editor files
+.DS_Store
+*.swp
+.vscode/
+.idea/
